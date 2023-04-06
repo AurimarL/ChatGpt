@@ -2,7 +2,7 @@
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { db } from "../../../firebase";
 import { toast } from "react-hot-toast";
 import ModelSelection from "../ModelSelection";
@@ -19,7 +19,7 @@ export default function ChatInput({ chatId }: Props) {
     fallbackData: "text-davinci-003",
   });
 
-  const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
+  const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!prompt) return;
