@@ -43,10 +43,8 @@ export function SideBar() {
         // eslint-disable-next-line @next/next/no-img-element
         <img
           onClick={() => signOut()}
-          h-12
-          w-12
-          mx-auto
-          className="rounded-full cursor-pointer mb-2 hover:opacity-50"
+         
+          className="rounded-full cursor-pointer mb-2 hover:opacity-50 h-12 w-12 mx-auto"
           src={`${session.user?.image}`}
           alt={`${session.user?.name}`}
         />
